@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 // WARNING no error trapping!
+// This code caould be used in the Project
 namespace MyLists
 {
     public partial class FormLists : Form
