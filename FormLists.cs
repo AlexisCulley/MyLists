@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 // WARNING no error trapping!
-// This code caould be used in the Project
+// This code could be used in the Project
 namespace MyLists
 {
     public partial class FormLists : Form
@@ -40,9 +40,16 @@ namespace MyLists
         }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            ColourList.Add(textBoxInput.Text);
-            DisplayList();
-            textBoxInput.Clear();
+            if (!string.IsNullOrWhiteSpace(textBoxInput.Text))
+            {
+                ColourList.Add(textBoxInput.Text);
+                DisplayList();
+                textBoxInput.Clear();
+            }
+            else
+            {
+                MessageBox.Show("please enter data into text box");
+            }
         }        
         private void buttonDelete_Click(object sender, EventArgs e)
         {
